@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-
+// update
 const firebaseConfig = {
   apiKey: "AIzaSyAOlzM55dkUftgIMjHhY2bwf-DrCB-gc4g",
   authDomain: "event-count-down-e6803.firebaseapp.com",
