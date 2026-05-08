@@ -154,8 +154,8 @@
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 24px;
   position: relative;
   z-index: 1;
   justify-items: stretch;
@@ -792,3 +792,268 @@
   position: relative;
   z-index: 1;
 }
+
+/* =============================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ============================================= */
+
+/* --- Tablet: 1024px --- */
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .stats-section {
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .cta-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* --- Mobile: 768px --- */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-content h1 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content .event-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Countdown timer in hero */
+  .countdown-timer {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .timer-display {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .time-value {
+    font-size: 1.4rem;
+  }
+
+  .time-label {
+    font-size: 0.75rem;
+  }
+
+  /* Events grid */
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 0.5rem;
+  }
+
+  /* Event image */
+  .event-image-container {
+    height: 180px;
+  }
+
+  /* Stats */
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-container {
+    max-width: 100%;
+    margin: 1.5rem auto;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.75rem 1.2rem;
+  }
+
+  /* Section header */
+  .section-header {
+    margin: 2rem 0 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Signup / Login */
+  .signup-container,
+  .login-container {
+    margin: 20px 16px;
+    padding: 28px 20px;
+    max-width: 100%;
+  }
+
+  .signup-container h2,
+  .login-container h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Featured events section */
+  .featured-events {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+/* --- Small Mobile: 480px --- */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Countdown timer in hero */
+  .countdown-timer {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .timer-display {
+    gap: 0.5rem;
+  }
+
+  .time-value {
+    font-size: 1.2rem;
+  }
+
+  .time-label {
+    font-size: 0.65rem;
+  }
+
+  /* Event image */
+  .event-image-container {
+    height: 160px;
+  }
+
+  /* Stats */
+  .stats-section {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  /* Countdown small inside cards */
+  .countdown-timer-small {
+    padding: 0.4rem;
+  }
+
+  .timer-units {
+    gap: 0.4rem;
+  }
+
+  .time-value-small {
+    font-size: 0.85rem;
+  }
+
+  /* Event card content */
+  .event-content {
+    padding: 8px;
+  }
+
+  .event-content h3 {
+    font-size: 1rem;
+  }
+
+  /* Section header */
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Buttons */
+  .btn-add-dashboard,
+  .btn-remove-dashboard,
+  .btn-login-prompt {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  /* Signup / Login */
+  .signup-container,
+  .login-container {
+    margin: 10px 8px;
+    padding: 22px 14px;
+    border-radius: 12px;
+  }
+
+  .signup-container h2,
+  .login-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  /* CTA */
+  .cta-button {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}

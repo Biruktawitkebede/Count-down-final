@@ -34,10 +34,10 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", overflowX: "hidden" }}>
           <Navbar />
 
-          <div style={{ flex: 1, padding: "20px", marginTop: "60px" }}>
+          <div style={{ flex: 1, marginTop: "60px" }}>
             <Routes>
               {/* Public routes */}
               <Route path="/" element={<EventList />} />

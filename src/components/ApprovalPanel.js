@@ -551,10 +551,10 @@ function HeadApprovalPanel() {
                 <tbody>
                   {pendingEvents.map((event) => (
                     <tr key={event.id}>
-                      <td>
+                      <td data-label="Event Name">
                         <strong>{getEventName(event)}</strong>
                       </td>
-                      <td>
+                      <td data-label="Event Title">
                         <div className="event-title-cell">
                           {event.title ? (
                             <span className="event-title-badge">{getEventTitle(event)}</span>
@@ -563,23 +563,23 @@ function HeadApprovalPanel() {
                           )}
                         </div>
                       </td>
-                      <td>
+                      <td data-label="Type">
                         <span className="event-type">{getEventType(event)}</span>
                       </td>
-                      <td>{event.proposedBy || "N/A"}</td>
-                      <td>
+                      <td data-label="Proposed By">{event.proposedBy || "N/A"}</td>
+                      <td data-label="Date & Time">
                         <div>
                           <div>{formatDate(event.date)}</div>
                           {event.time && <small>{formatTime(event.time)}</small>}
                         </div>
                       </td>
-                      <td>{event.location || "N/A"}</td>
-                      <td>
+                      <td data-label="Location">{event.location || "N/A"}</td>
+                      <td data-label="Status">
                         <span className={`status-badge status-${event.status || 'pending'}`}>
                           {event.status || "pending"}
                         </span>
                       </td>
-                      <td>
+                      <td data-label="Actions">
                         <div className="action-buttons">
                           <button
                             className="view-btn"
@@ -641,10 +641,10 @@ function HeadApprovalPanel() {
                 <tbody>
                   {submittedEvents.map((event) => (
                     <tr key={event.id}>
-                      <td>
+                      <td data-label="Event Name">
                         <strong>{getEventName(event)}</strong>
                       </td>
-                      <td>
+                      <td data-label="Event Title">
                         <div className="event-title-cell">
                           {event.title ? (
                             <span className="event-title-badge">{getEventTitle(event)}</span>
@@ -653,22 +653,22 @@ function HeadApprovalPanel() {
                           )}
                         </div>
                       </td>
-                      <td>
+                      <td data-label="Type">
                         <span className="event-type">{getEventType(event)}</span>
                       </td>
-                      <td>
+                      <td data-label="Date & Time">
                         <div>
                           <div>{formatDate(event.date)}</div>
                           {event.time && <small>{formatTime(event.time)}</small>}
                         </div>
                       </td>
-                      <td>{event.location || "N/A"}</td>
-                      <td>
+                      <td data-label="Location">{event.location || "N/A"}</td>
+                      <td data-label="Status">
                         <span className={`status-badge status-${event.status || 'pending'}`}>
                           {event.status || "pending"}
                         </span>
                       </td>
-                      <td>
+                      <td data-label="Actions">
                         <div className="action-buttons">
                           <button
                             className="view-btn"

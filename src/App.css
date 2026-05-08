@@ -664,22 +664,17 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  background-color: #1a202c;
-  /* Dark navy background */
-  color: #f7fafc;
-  /* Light text */
+  z-index: 1100;
+  background-color: #ffffff;
+  color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 0.6rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  padding-top: 60px;
-  /* same as navbar height */
-
+  min-height: 60px;
+  box-sizing: border-box;
 }
 
 .navbar-left,
@@ -1388,4 +1383,292 @@
 
 .btn-remove-dashboard:hover {
   background-color: #555 !important;
+}
+
+/* =============================================
+   COMPREHENSIVE MOBILE RESPONSIVE STYLES
+   ============================================= */
+
+/* ---- Fix page-content top padding for fixed navbar ---- */
+.page-content {
+  padding-top: 70px;
+}
+
+/* ---- Home Nav (static nav on home page) ---- */
+.home-nav .nav-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ============================================
+   TABLET (max-width: 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 0 1rem;
+    gap: 20px;
+  }
+
+  .featured-events {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-section {
+    padding: 80px 20px 120px;
+  }
+}
+
+/* ============================================
+   MOBILE (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* --- Home Nav --- */
+  .home-nav {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .home-nav .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 70px 16px 90px;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+    line-height: 1.3;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+
+  /* --- Hero CTA Buttons --- */
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* --- Countdown (big hero timer) --- */
+  .countdown {
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .countdown .time-box .number {
+    font-size: 1.6rem;
+    padding: 8px 14px;
+  }
+
+  /* --- Featured Events --- */
+  .featured-events {
+    padding: 2.5rem 1rem;
+  }
+
+  .featured-events h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+    gap: 16px;
+  }
+
+  /* --- Stats Section --- */
+  .stats-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border-radius: 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  /* --- Testimonials --- */
+  .testimonials {
+    padding: 2.5rem 1rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+
+  /* --- Footer --- */
+  .home-footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+
+  /* --- Signup Container --- */
+  .signup-container {
+    margin: 20px auto;
+    padding: 28px 20px;
+    max-width: calc(100% - 32px);
+  }
+
+  .signup-container h2 {
+    font-size: 1.8rem;
+  }
+
+  /* --- Event Type Hero badge --- */
+  .event-type-hero {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+
+  /* --- Hero Section --- */
+  .hero-section {
+    padding: 60px 12px 70px;
+  }
+
+  /* --- Countdown (big) --- */
+  .countdown {
+    gap: 10px;
+  }
+
+  .countdown .time-box .number {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+  }
+
+  /* --- Hero countdown timer --- */
+  .hero-section .countdown-timer h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-section .countdown-timer .timer-display {
+    gap: 8px;
+  }
+
+  .hero-section .countdown-timer .time-value {
+    font-size: 1.1rem;
+  }
+
+  .hero-section .countdown-timer .time-label {
+    font-size: 0.7rem;
+  }
+
+  /* --- CTA buttons --- */
+  .cta-btn {
+    max-width: 100%;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* --- Events grid card --- */
+  .event-card img {
+    height: 180px;
+  }
+
+  .event-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* --- Stats --- */
+  .stats-section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  /* --- Footer bottom --- */
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+
+  /* --- Signup container --- */
+  .signup-container {
+    margin: 10px auto;
+    padding: 24px 16px;
+    border-radius: 12px;
+  }
+
+  /* --- Login container --- */
+  .login-container > div {
+    padding: 28px 18px;
+    border-radius: 14px;
+  }
+
+  .login-container h2 {
+    font-size: 1.6rem;
+  }
+
+  /* --- Countdown small timer --- */
+  .countdown-timer-small {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  /* --- Event type badge --- */
+  .event-type-badge {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  /* --- Home nav links --- */
+  .home-nav {
+    justify-content: center;
+  }
+
+  .nav-brand a {
+    font-size: 1.2rem;
+  }
 }

@@ -503,15 +503,15 @@ const AdminPanel = () => {
                 <tbody>
                   {filteredUsers.map((user, index) => (
                     <tr key={user.id}>
-                      <td>{index + 1}</td>
-                      <td>
+                      <td data-label="No">{index + 1}</td>
+                      <td data-label="Full Name">
                         <div className="user-info">
                           <strong>{user.fullName || "N/A"}</strong>
                         </div>
                       </td>
-                      <td>{user.phoneNumber || "N/A"}</td>
-                      <td>{user.email}</td>
-                      <td>
+                      <td data-label="Phone">{user.phoneNumber || "N/A"}</td>
+                      <td data-label="Email">{user.email}</td>
+                      <td data-label="Role">
                         {editingUserId === user.id ? (
                           <div className="role-edit-container">
                             <select
@@ -547,8 +547,8 @@ const AdminPanel = () => {
                           </span>
                         )}
                       </td>
-                      <td>{formatDate(user.createdAt)}</td>
-                      <td>
+                      <td data-label="Join Date">{formatDate(user.createdAt)}</td>
+                      <td data-label="Actions">
                         <div className="action-buttons">
                           <button
                             className="view-btn"
@@ -660,7 +660,7 @@ const AdminPanel = () => {
                 <tbody>
                   {displayedEvents.map((ev) => (
                     <tr key={ev.id}>
-                      <td>
+                      <td data-label="Event Name">
                         <strong>{getEventName(ev)}</strong>
                         {ev.description && (
                           <div className="event-description-preview">
@@ -671,7 +671,7 @@ const AdminPanel = () => {
                           </div>
                         )}
                       </td>
-                      <td>
+                      <td data-label="Event Title">
                         <div className="event-title-cell">
                           {ev.title ? (
                             <span className="event-title-badge">{getEventTitle(ev)}</span>
@@ -680,23 +680,23 @@ const AdminPanel = () => {
                           )}
                         </div>
                       </td>
-                      <td>
+                      <td data-label="Type">
                         <span className="event-type">{getEventType(ev)}</span>
                       </td>
-                      <td>{ev.proposedBy || "N/A"}</td>
-                      <td>
+                      <td data-label="Proposed By">{ev.proposedBy || "N/A"}</td>
+                      <td data-label="Date & Time">
                         <div>
                           <div>{formatDate(ev.date)}</div>
                           {ev.time && <small>{formatTime(ev.time)}</small>}
                         </div>
                       </td>
-                      <td>{ev.location || "N/A"}</td>
-                      <td>
+                      <td data-label="Location">{ev.location || "N/A"}</td>
+                      <td data-label="Status">
                         <span className={`status-badge status-${ev.status || 'pending'}`}>
                           {ev.status || "pending"}
                         </span>
                       </td>
-                      <td>
+                      <td data-label="Actions">
                         <div className="action-buttons">
                           <button
                             className="view-btn"
